@@ -1,0 +1,10 @@
+Click on EC2
+Click on Launch Instance
+Name your instance anything ya want
+click on UBUNTU
+KEY PAIR DO NOT FORGET 
+scroll down and selected key pair drop down arrow and choose that option
+then Launch instance and open 
+click on the green thing (The id)
+click on instance ID and click CONNECT
+terminate instance

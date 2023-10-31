@@ -1,0 +1,80 @@
+Search Pipeline
+click on code pipeline
+click on create pipeline
+name your pipeline 
+go neechu and click on next
+source provider - github version 2 select karo 
+then click on 'connect to github'
+then it takes you to a new page and you have to name a connection 
+then click on connect to github
+now click on install a new app
+now click on install 
+this will take you to another page
+now you see a number no with that magnifying glass icon matlab ho gaya
+now click on connect
+ready to connect dikha toh github se connect ho gaya
+and now you've to connect it to your repository
+now create a new repo on github.com
+now open vscode app (optional)
+we made a new file on github
+we dragged client ke andar ke files and folders (BUILD & NODE MODULE CHOD KE cause both are unnecesary)
+don't add files like a gadha, do drag and drop PLS
+now commit changes
+now go back to awwwwwwwwws
+now scroll down to repository name and type in the name
+if you don't see the option then reload the page and add connection name and all now see you'll get the option
+go to branch name and select 'main'
+click next
+now click on Build Provider and select AWS CodeBuild
+then click on project name and choose react build
+click next
+now click on deploy provider and choose Amazon S3
+now click on bucket and choose your bucket name
+S3 Object Key: type 'Sample.zip'
+
+now click on the box of Extract file before deploy 
+
+NOW open s3 on another tab
+click next
+
+go neechu and create pipline
+
+GO TO CODE REPO (DELULU) and add a file and copy this code
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+   
+    commands:
+        # install npm
+        - echo Installing npm dependencies 
+        - npm install
+       
+  build:
+    commands:
+        # run build script
+        - npm run build
+     
+artifacts:
+  # include all files required to run application
+  # notably excluded is node_modules, as this will cause overwrite error on deploy
+  files:
+    - '*/'
+  base-directory: './build'
+
+  and name the file buildspec.yml
+  now click on release change (this modifies new edits)
+now everytime you change on github, it changes here too 
+
+//now all the icons on the right should be a green tick//
+
+Now go to the other tab where S3 is open and go to properties, scroll down and click on the link
+
+
+
+
+
+

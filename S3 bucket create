@@ -1,0 +1,94 @@
+AWS ke steps
+
+S3 BUCKET
+Create bucket
+Name yo bucket
+
+1. Head over to your AWS account 
+2. Click on S3 Bucket 
+3. Click on Create bucket 
+4. Give it a name & without changing any settings click on create bucket 
+
+5. Go to properties and enable the static website option. This will unlock more options to you
+(Yeh option end main hai - scroll down) 
+
+6. Give it a name index.html
+
+
+7. Click on Save Changes, this will provide you with a link
+(Scroll neechu neechu tak for this also)
+
+
+8. Go to permissions and ublock all public access (upar hi hai, don’t scroll down - use your eyes)
+
+
+9. In permissions itself go to bucket policy and edit it to: (agar no policy display Hua toh Matlab empty hai)
+PASTE THIS CODE ON THE LEFT SIDE DUMBASS & change the bucket name also 
+// Code 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::Bucket-Name/*"
+            ]
+        }
+    ]
+}
+
+// Code
+
+
+10th step onwards:
+Go to VSCODE
+Open a file in a folder
+Close the welcome page
+(don't open file)
+
+
+Press control & oui oui (~) button to OPEN TERMINAL
+Type  npx create-react-app client 
+(This creates a react app for ya)
+
+Now, you type 
+  cd client
+  npm start  (this starts your website)
+( copy paste from par these 2 commands)
+
+Now chrome opens - react website ho gaya
+
+CONTROL C PRESS KAR
+
+type: npm run build
+( this creates a build folder on the left side dekhna inside client folder)
+
+Go back to AWS now
+Click on ‘Objects’
+Then click on Upload 
+Then click on Add Files (INSIDE BUILD ONLY)
+Upload all files (only files)
+Add Folder
+Click on static and upload the entire folder
+
+Then go to properties, scroll ekdum neechu neechu and click on the click and TAADDAAA
+
+
+
+
+
+
+
+
+
+
+
+
+
+

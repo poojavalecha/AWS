@@ -1,6 +1,6 @@
 IAM
 USER
-create user
+create a new user
 add user to group
 create group
 admin acess first option click karo (click only box)
@@ -10,3 +10,23 @@ click on it
 go to user and security credentials
 create access key
 click on command line interface
+now download .csv file
+write terraform init
+write the downloaded credentials in a specific format 
+
+provider "aws" {
+  region  = "us-west-2" //((reagion same karna aws se))//
+}
+
+resource "aws_instance" "app_server" {
+  ami           = "ami-830c94e3"
+  instance_type = "t2.micro"
+
+ //optional// tags = {
+    Name = "ExampleAppServerInstance"
+  }
+}
+terraform plan 
+terraform apply (this makes tera)
+terraform destroy (this destroys the tera)
+
